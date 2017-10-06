@@ -42,7 +42,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	setlocale(LC_ALL, "Rus");      
 	node_s* node = NULL;
 	DBFile* db = initialize(db_file_name);
-	cout << "Ñ÷èòûâàåì èç ôàéëà" << endl << endl;
+	cout << "Ã‘Ã·Ã¨Ã²Ã»Ã¢Ã Ã¥Ã¬ Ã¨Ã§ Ã´Ã Ã©Ã«Ã " << endl << endl;
 	open_db(db);
 	close_db(db);
     open_db(db);
@@ -62,34 +62,34 @@ while (read_from_db(db, &node)) {
 
 	int request = -1;
 
-	cout << "Ðàáîòà ñî ñòåêîì" << endl << endl;
-	cout << "Çàïðîñ íà äåéñòâèå" << endl;
-	cout << "1 - äîáàâèòü" << endl;
-	cout << "2 - óäàëèòü" << endl;
-	cout << "0 - âûõîä" << endl;
+	cout << "ÃÃ Ã¡Ã®Ã²Ã  Ã±Ã® Ã±Ã²Ã¥ÃªÃ®Ã¬" << endl << endl;
+	cout << "Ã‡Ã Ã¯Ã°Ã®Ã± Ã­Ã  Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥" << endl;
+	cout << "1 - Ã¤Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼" << endl;
+	cout << "2 - Ã³Ã¤Ã Ã«Ã¨Ã²Ã¼" << endl;
+	cout << "0 - Ã¢Ã»ÃµÃ®Ã¤" << endl;
 	while (request != 0)
 	{
-		cout << endl << "Âûáîð : ";
+		cout << endl << "Ã‚Ã»Ã¡Ã®Ã° : ";
 		cin >> request;
 		switch (request) {
 		case 1:
 		{
 			int data;
-			cout << "Äîáàâèòü áàçó = ";
+			cout << "Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã¡Ã Ã§Ã³ = ";
 			cin >> data;
 			push(data);
 			break; }
 		case 2:
 		{if (top_adress == NULL)
-			cout << "Íåò ýëåìåíòîâ â ñòåêå" << endl;
+			cout << "ÃÃ¥Ã² Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ Ã±Ã²Ã¥ÃªÃ¥" << endl;
 		else
-			cout << "Çàïðàøèâàåìûå äàííûå = " << pop(top_adress) << endl;
+			cout << "Ã‡Ã Ã¯Ã°Ã Ã¸Ã¨Ã¢Ã Ã¥Ã¬Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ = " << pop(top_adress) << endl;
 		break;
 		}
 		default: break;
 		}
 	}
-	cout << endl << "Ðàáîòà ñ ôàéëîì" << endl << endl;
+	cout << endl << "ÃÃ Ã¡Ã®Ã²Ã  Ã± Ã´Ã Ã©Ã«Ã®Ã¬" << endl << endl;
 
 	node_s* TOP = top_adress;
 
