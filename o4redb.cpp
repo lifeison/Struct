@@ -2,13 +2,13 @@
 #include <iostream>
 #include <locale.h>
  using namespace std;
-struct QUEUE //ñòðóêòóðà î÷åðåäü
+struct QUEUE //Ã±Ã²Ã°Ã³ÃªÃ²Ã³Ã°Ã  Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¼
 {
     int info;
     QUEUE *next;
 };
  
-int EmptyQ(QUEUE *first) //ïðîâåðêà ïóñòîòû î÷åðåäè
+int EmptyQ(QUEUE *first) //Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã¯Ã³Ã±Ã²Ã®Ã²Ã» Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨
 {
     if ((first)==NULL)
     return 1;
@@ -16,7 +16,7 @@ int EmptyQ(QUEUE *first) //ïðîâåðêà ïóñòîòû î÷åðåäè
     return 0;
 }
  
-void AddQ(QUEUE ** last) //äîáàâëåíèå ýëåìåíòà 
+void AddQ(QUEUE ** last) //Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  
 {
     QUEUE *tmp = new QUEUE;
     tmp->info=rand()%100;
@@ -25,7 +25,7 @@ void AddQ(QUEUE ** last) //äîáàâëåíèå ýëåìåíòà
     *last=tmp;
 }
  
-void DelQ(QUEUE *first, QUEUE ** last) //óäàëåíèå èç î÷åðåäè 
+void DelQ(QUEUE *first, QUEUE ** last) //Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã¨Ã§ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ 
 {
     QUEUE *tmp=first->next;
     if(first->next==NULL)
@@ -33,7 +33,7 @@ void DelQ(QUEUE *first, QUEUE ** last) //óäàëåíèå èç î÷åðåäè
     delete tmp;
 }
  
-void ShowQ(QUEUE *first) //ïðîñìîòð î÷åðåäè
+void ShowQ(QUEUE *first) //Ã¯Ã°Ã®Ã±Ã¬Ã®Ã²Ã° Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨
 {
     QUEUE *tmp=first->next;
     while(tmp!=NULL)
@@ -43,7 +43,7 @@ void ShowQ(QUEUE *first) //ïðîñìîòð î÷åðåäè
     }
 }
  
-void ClearQ(QUEUE *first, QUEUE ** last) //î÷èñòêà î÷åðåäè 
+void ClearQ(QUEUE *first, QUEUE ** last) //Ã®Ã·Ã¨Ã±Ã²ÃªÃ  Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ 
 {
     QUEUE *tmp;
     while(first->next!=NULL)
@@ -63,35 +63,35 @@ int main()
     char d;
     do
     {
-        cout<<"1. Äîáàâëåíèå ýëåìåíòîâ â êîíåö î÷åðåäè \n"<<endl;
-        cout<<"2. Óäàëåíèå ýëåìåíòà èç íà÷àëà î÷åðåäè \n"<<endl;
-        cout<<"3. Âûâîä ýëåìåíòîâ \n"<<endl;
-        cout<<"0. Âûõîä \n"<<endl;
-        cout<<"Âûáðàííîå äåéñòâèå: "<<endl;
+        cout<<"1. Ã„Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ ÃªÃ®Ã­Ã¥Ã¶ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ \n"<<endl;
+        cout<<"2. Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¨Ã§ Ã­Ã Ã·Ã Ã«Ã  Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ \n"<<endl;
+        cout<<"3. Ã‚Ã»Ã¢Ã®Ã¤ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ \n"<<endl;
+        cout<<"0. Ã‚Ã»ÃµÃ®Ã¤ \n"<<endl;
+        cout<<"Ã‚Ã»Ã¡Ã°Ã Ã­Ã­Ã®Ã¥ Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥: "<<endl;
         cin>> d;
         switch(d)
         {
             case 1:
             AddQ(&last);
-            cout<<"\nÝëåìåíò äîáàâëåí â êîíåö î÷åðåäè \n"<<endl;
+            cout<<"\nÃÃ«Ã¥Ã¬Ã¥Ã­Ã² Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­ Ã¢ ÃªÃ®Ã­Ã¥Ã¶ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ \n"<<endl;
             break;
  
             case 2:
             if (EmptyQ(first)==1)
-            cout<<"\nÎ÷åðåäü ïóñòàÿ \n";
+            cout<<"\nÃŽÃ·Ã¥Ã°Ã¥Ã¤Ã¼ Ã¯Ã³Ã±Ã²Ã Ã¿ \n";
             else
             {
                 DelQ(first,&last);
-                cout<<"\nÝëåìåíò óäàëåí èç î÷åðåäè \n"<<endl;
+                cout<<"\nÃÃ«Ã¥Ã¬Ã¥Ã­Ã² Ã³Ã¤Ã Ã«Ã¥Ã­ Ã¨Ã§ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨ \n"<<endl;
             }
             break;
  
             case 3:
             if (EmptyQ(first)==1)
-            cout<<"\nÎ÷åðåäü ïóñòàÿ \n"<<endl;
+            cout<<"\nÃŽÃ·Ã¥Ã°Ã¥Ã¤Ã¼ Ã¯Ã³Ã±Ã²Ã Ã¿ \n"<<endl;
             else
             {
-               cout<<"\nÝëåìåíòû î÷åðåäè: "<<endl;
+               cout<<"\nÃÃ«Ã¥Ã¬Ã¥Ã­Ã²Ã» Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨: "<<endl;
                 ShowQ(first);
                 cout<<"\n";
             }
@@ -100,7 +100,7 @@ int main()
             case 0:
             ClearQ(first,&last);
             break;
-            default: cout<<"\nÎøèáêà!\n"<<endl; break;
+            default: cout<<"\nÃŽÃ¸Ã¨Ã¡ÃªÃ !\n"<<endl; break;
           }
        }while(d!=0);
     _getch();
