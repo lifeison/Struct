@@ -42,7 +42,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	setlocale(LC_ALL, "Rus");      
 	node_s* node = NULL;
 	DBFile* db = initialize(db_file_name);
-	cout << "Ñ÷èòûâàåì èç ôàéëà" << endl << endl;
+	cout << "Считываем из файла" << endl << endl;
 	open_db(db);
 	close_db(db);
     open_db(db);
@@ -62,34 +62,34 @@ while (read_from_db(db, &node)) {
 
 	int request = -1;
 
-	cout << "Ðàáîòà ñî ñòåêîì" << endl << endl;
-	cout << "Çàïðîñ íà äåéñòâèå" << endl;
-	cout << "1 - äîáàâèòü" << endl;
-	cout << "2 - óäàëèòü" << endl;
-	cout << "0 - âûõîä" << endl;
+	cout << "Работа со стеком" << endl << endl;
+	cout << "Запрос на действие" << endl;
+	cout << "1 - добавить" << endl;
+	cout << "2 - удалить" << endl;
+	cout << "0 - выход" << endl;
 	while (request != 0)
 	{
-		cout << endl << "Âûáîð : ";
+		cout << endl << "Выбор : ";
 		cin >> request;
 		switch (request) {
 		case 1:
 		{
 			int data;
-			cout << "Äîáàâèòü áàçó = ";
+			cout << "Добавить базу = ";
 			cin >> data;
 			push(data);
 			break; }
 		case 2:
 		{if (top_adress == NULL)
-			cout << "Íåò ýëåìåíòîâ â ñòåêå" << endl;
+			cout << "Нет элементов в стеке" << endl;
 		else
-			cout << "Çàïðàøèâàåìûå äàííûå = " << pop(top_adress) << endl;
+			cout << "Запрашиваемые данные = " << pop(top_adress) << endl;
 		break;
 		}
 		default: break;
 		}
 	}
-	cout << endl << "Ðàáîòà ñ ôàéëîì" << endl << endl;
+	cout << endl << "Работа с файлом" << endl << endl;
 
 	node_s* TOP = top_adress;
 
