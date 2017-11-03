@@ -21,14 +21,14 @@ void main()
  
     while (1)
     {       
-        spisok("1. Добавить Элемент\n");
-        spisok("2. Просмотр Списка Слева Направо\n");
-        spisok("3. Просмотр Списка Справа Налево\n");
-        spisok("4. Удалить Голову\n");
-        spisok("5. Удалить Хвост\n");
-        spisok("6. Поиск Элемента\n");
-        spisok("0. Выход\n\n");
-        spisok("Ваш Выбор: ");
+        spisok("1. Р”РѕР±Р°РІРёС‚СЊ Р­Р»РµРјРµРЅС‚\n");
+        spisok("2. РџСЂРѕСЃРјРѕС‚СЂ РЎРїРёСЃРєР° РЎР»РµРІР° РќР°РїСЂР°РІРѕ\n");
+        spisok("3. РџСЂРѕСЃРјРѕС‚СЂ РЎРїРёСЃРєР° РЎРїСЂР°РІР° РќР°Р»РµРІРѕ\n");
+        spisok("4. РЈРґР°Р»РёС‚СЊ Р“РѕР»РѕРІСѓ\n");
+        spisok("5. РЈРґР°Р»РёС‚СЊ РҐРІРѕСЃС‚\n");
+        spisok("6. РџРѕРёСЃРє Р­Р»РµРјРµРЅС‚Р°\n");
+        spisok("0. Р’С‹С…РѕРґ\n\n");
+        spisok("Р’Р°С€ Р’С‹Р±РѕСЂ: ");
         cin>>action;
  
         if (action == 0)
@@ -41,7 +41,7 @@ void main()
         {
             system("CLS");
             int numb = -1;
-            spisok("Введите Число: ");
+            spisok("Р’РІРµРґРёС‚Рµ Р§РёСЃР»Рѕ: ");
             cin>>numb;
             Node* ptr = new Node;
             ptr->number = numb;
@@ -68,12 +68,12 @@ void main()
             Node* ptr = NULL;
             if (head == NULL)
             {
-                spisok("\t!!! СПИСОК ПУСТ !!!\n\n");
+                spisok("\t!!! РЎРџРРЎРћРљ РџРЈРЎРў !!!\n\n");
                 system("PAUSE");
                 system("CLS");
                 continue;
             }
-            spisok("* * * * * СПИСОК: СЛЕВА НАПРАВО * * * * *\n\n");
+            spisok("* * * * * РЎРџРРЎРћРљ: РЎР›Р•Р’Рђ РќРђРџР РђР’Рћ * * * * *\n\n");
             ptr = head;
             while (1)
             {
@@ -94,12 +94,12 @@ void main()
             Node* ptr = NULL;           
             if (head == NULL)
             {
-                spisok("\t!!! СПИСОК ПУСТ !!!\n\n");
+                spisok("\t!!! РЎРџРРЎРћРљ РџРЈРЎРў !!!\n\n");
                 system("PAUSE");
                 system("CLS");
                 continue;
             }
-            spisok("* * * * * СПИСОК: СПРАВА НАЛЕВО * * * * *\n\n");
+            spisok("* * * * * РЎРџРРЎРћРљ: РЎРџР РђР’Рђ РќРђР›Р•Р’Рћ * * * * *\n\n");
             ptr = tail;
             while (1)
             {
@@ -120,7 +120,7 @@ void main()
             Node* ptrDelete = NULL;         
             if (head == NULL)
             {
-                spisok("\t!!! СПИСОК ПУСТ !!!\n\n");
+                spisok("\t!!! РЎРџРРЎРћРљ РџРЈРЎРў !!!\n\n");
                 system("PAUSE");
                 system("CLS");
                 continue;
@@ -145,7 +145,7 @@ void main()
             Node* ptrDelete = NULL;
             if (tail == NULL)
             {
-                spisok("\t!!! СПИСОК ПУСТ !!!\n\n");
+                spisok("\t!!! РЎРџРРЎРћРљ РџРЈРЎРў !!!\n\n");
                 system("PAUSE");
                 system("CLS");
                 continue;
@@ -172,24 +172,24 @@ void main()
             int key = -1;
             if (head == NULL)
             {
-                spisok("\t!!! СПИСОК ПУСТ !!!\n\n");
+                spisok("\t!!! РЎРџРРЎРћРљ РџРЈРЎРў !!!\n\n");
                 system("PAUSE");
                 system("CLS");
                 continue;
             }
-            spisok("Введите Элемент Для Поиска: ");
+            spisok("Р’РІРµРґРёС‚Рµ Р­Р»РµРјРµРЅС‚ Р”Р»СЏ РџРѕРёСЃРєР°: ");
             cin>>key;           
             ptr = head;
             while (1)
             {
                 if (key == ptr->number)
                 {
-                    spisok("\n\t!!! ЭЛЕМЕНТ НАЙДЕН !!!\n");
+                    spisok("\n\t!!! Р­Р›Р•РњР•РќРў РќРђР™Р”Р•Рќ !!!\n");
                     break;
                 }
                 if (ptr->next == NULL)
                 {
-                    spisok("\n\t!!! ЭЛЕМЕНТ НЕ НАЙДЕН !!!\n");
+                    spisok("\n\t!!! Р­Р›Р•РњР•РќРў РќР• РќРђР™Р”Р•Рќ !!!\n");
                     break;
                 }
                 ptr = ptr->next;
@@ -202,7 +202,7 @@ void main()
         if (action > 6)
         {
             system("CLS");
-            spisok("\t!!! НЕВЕРНЫЙ ВЫБОР. ПОВТОРИТЕ ВВОД !!!\n\n");
+            spisok("\t!!! РќР•Р’Р•Р РќР«Р™ Р’Р«Р‘РћР . РџРћР’РўРћР РРўР• Р’Р’РћР” !!!\n\n");
             system("PAUSE");
             system("CLS");
             continue;
