@@ -125,8 +125,8 @@ int main ()
 {
 	Hash x;
 	x.AddKeyValue("semen", "one");
-	//x.AddKeyValue("petr", "two");
-	//x.AddKeyValue("petya", "three");
+	//x.AddKeyValue("sem", "two");
+	//x.AddKeyValue("semya", "three");
 	cout<<x.GetKey("semen");
 	scanf("%*c");
 	return 0;
