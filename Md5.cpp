@@ -139,7 +139,7 @@ bool CodeMD5(const char *buffer, DWORD size, DWORD digest[4] )
 }
 int main() { 
 DWORD md5[4]; 
-char buffer[] = "Sema had codded this (no)"; 
+char buffer[] = "Sema had codded this"; 
 CodeMD5(buffer, sizeof(buffer) - 1, md5); 
 cout « hex « md5[3] « md5[2] « md5[1] « md5[0] « "\n"; 
 return 0; 
