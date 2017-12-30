@@ -79,6 +79,6 @@ void HashTable::change_capaсity(int new_bucket_size) {
 	element_of_table temp = *mass;
 	*mass = *new_mass;
 	*new_mass = temp;
-	delete new_mass;
+	delete [] new_mass;
 	return;
 }
